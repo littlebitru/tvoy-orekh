@@ -1,5 +1,5 @@
 # Tvoy Orekh — Django E-commerce Store
-
+[![Django Tests](https://github.com/littlebitru/tvoy-orekh/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/littlebitru/tvoy-orekh/actions/workflows/tests.yml)
 A Django-based online store with user authentication, product catalogue, shopping cart, order checkout and customer purchase history.
 
 The project demonstrates common e-commerce backend workflows and relational database design using Django ORM.
