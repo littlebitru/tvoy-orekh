@@ -70,6 +70,28 @@ Install the dependencies:
 ```bash
 pip install -r requirements.txt
 ```
+Create a local environment file from the example:
+
+### Windows
+
+```powershell
+Copy-Item .env.example .env
+```
+
+### macOS / Linux
+
+```bash
+cp .env.example .env
+```
+
+Open `.env` and replace the example secret key:
+
+```env
+DJANGO_SECRET_KEY=your-secure-secret-key
+DJANGO_DEBUG=True
+```
+
+The `.env` file contains local configuration and must not be committed to GitHub.
 
 Apply database migrations:
 
