@@ -1,8 +1,23 @@
+import os
 from pathlib import Path
 
+from dotenv import load_dotenv
+
+
 BASE_DIR = Path(__file__).resolve().parent.parent
-SECRET_KEY = 'django-insecure-change-me-before-production'
-DEBUG = True
+
+load_dotenv(BASE_DIR / '.env')
+
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
+
+if not SECRET_KEY:
+    raise RuntimeError('DJANGO_SECRET_KEY is not set')
+
+DEBUG = os.getenv('DJANGO_DEBUG', 'False').lower() in (
+    '1',
+    'true',
+    'yes',
+)
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'testserver']
 
 INSTALLED_APPS = [
