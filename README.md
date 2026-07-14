@@ -68,7 +68,7 @@ source .venv/bin/activate
 Install the dependencies:
 
 ```bash
-pip install django pillow
+pip install -r requirements.txt
 ```
 
 Apply database migrations:
